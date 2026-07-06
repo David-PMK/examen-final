@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Recetas Ecuatorianas</title>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f0f4ff, #e8eaf6);
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      width: 100%;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    main {
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem;
+      max-width: 800px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    a {
+      color: #2e6ff7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": {
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "dct": "http://purl.org/dc/terms/",
+      "foaf": "http://xmlns.com/foaf/0.1/",
+      "schema": "http://schema.org/",
+      "title": "dct:title",
+      "description": "dct:description",
+      "keyword": "dcat:keyword",
+      "license": { "@id": "dct:license", "@type": "@id" },
+      "distribution": { "@id": "dcat:distribution", "@type": "@id" }
+    },
+    "@type": "dcat:Dataset",
+    "title": "Recetas Ecuatorianas – Conjunto de datos RDF",
+    "description": "Conjunto de datos que describe recetas tradicionales de Ecuador (entradas, sopas, plato principal, postres y bebidas). Cada receta está modelada con vocabulario Schema.org y exportada en formato Turtle (recipes.ttl).",
+    "keyword": ["recetas", "Ecuador", "cultura gastronómica", "RDF", "Schema.org", "DCAT"],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "distribution": "./recetas.ttl"
+  }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>Catálogo de Recetas Ecuatorianas</h1>
+  </header>
+  <main>
+    <p>Este sitio web ofrece acceso al <strong>dataset RDF</strong> de recetas ecuatorianas. El archivo Turtle
+      <code>recetas.ttl</code> contiene la representación estructurada de cada receta usando el vocabulario <a href="https://schema.org/Recipe" target="_blank">Schema.org</a>.</p>
+    <p>Puede descargar el archivo directamente.</p>
+    <ul>
+      <li><a href="./recetas.ttl" download>Descargar recetas.ttl</a></li>
+    </ul>
+  </main>
+  <footer>
+    © 2026 - Proyecto Semántica Web – Universidad XYZ
+  </footer>
+</body>
+
+</html>
